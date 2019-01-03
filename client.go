@@ -45,6 +45,7 @@ const (
 	ConverterWikiTraditional = "WikiTraditional"
 )
 
+// Convert extra options: https://docs.zhconvert.org/api/convert/#%E5%AD%97%E5%B9%95%E6%A8%A3%E5%BC%8F
 func (c Client) Convert(converter, text string, extraOptions map[string]string) (*RawResp, *ConvertData, error) {
 	data := map[string]string{
 		"text":      text,
